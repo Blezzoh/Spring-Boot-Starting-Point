@@ -18,28 +18,37 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
 	<dependencies>
-		<!-- 
-			-> What's happening? Spring Boot has a preset combination of JARs that works together 
-			for the web(check the Maven dependencies after updating the project). This has been set and confirmed by the Spring Community.
-			-> This bundling is what is known as the BILL OF MATERIALS
-		-->
+		<!-- -> What's happening? Spring Boot has a preset combination of JARs 
+			that works together for the web(check the Maven dependencies after updating 
+			the project). This has been set and confirmed by the Spring Community. -> 
+			This bundling is what is known as the BILL OF MATERIALS -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>

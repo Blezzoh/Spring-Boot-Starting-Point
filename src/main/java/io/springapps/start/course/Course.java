@@ -1,30 +1,38 @@
-package io.springapps.start.topic;
+package io.springapps.start.course;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
-/**
- * This is the model
- *
- */
-// annotation that indicates that a class maps to a table
+import io.springapps.start.topic.Topic;
+
 @Entity
-public class Topic {
-
-	// mark the ide
+public class Course {
 	@Id
 	private String id;
-	private String name;
-	private String description;
 
-	public Topic() {
+	private String name, description;
+
+	@ManyToOne
+	private Topic topic;
+
+	public Course() {
 	}
 
-	public Topic(String id, String name, String description) {
+	public Course(String id, String name, String description, String topicId) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		this.topic = new Topic(topicId, "", "");
+	}
+
+	public Topic getTopic() {
+		return topic;
+	}
+
+	public void setTopic(Topic topic) {
+		this.topic = topic;
 	}
 
 	public String getId() {
@@ -50,5 +58,4 @@ public class Topic {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
 }

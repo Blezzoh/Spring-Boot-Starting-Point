@@ -1,36 +1,57 @@
-## What is this?
+### What is this?
 
-A good starting point for writting a spring boot web application
+A good starting point for writing a spring boot web application
 
-## Package Embedded
+### Package Embedded
 
 1. Spring boot web starter: A preset combination of JARs that works together 
 			for the web(check the Maven dependencies after updating the project)
 
-2. Embedded Tomcat Server
-	- Servel container config is part of the application
+2. Embedded TomCat Server
+	- Servlet container configurations is part of the application
 	- Can run by a simple command
-	- useful for microservice architecture
-	- standalone application
+	- useful for microservices architecture
+	- Stand alone application
 
-## Ressources
+### Ressources
 
-1. Topic
+1. Topics
+
+Its implementation introduces contents of Spring Boot Web in a RestFull API and its components. 
 
 	- GET    /topics       Gets all topics
-	- GET    /topics/id    Gets the topic
+	- GET    /topics/{id}    Gets the topic
 	- POST   /topics       Creates new topic
-	- PUT    /topics/id 	 Updates the topic
-	- DELETE /topics/id    Deleltes the topic
-	
-	
-## Running
+	- PUT    /topics/{id} 	 Updates the topic
+	- DELETE /topics/{id}    Deleltes the topic
 
-	All of the ways listed below are done in eclipse ide. 
+2. Courses
+
+Its implemention introduces the relationship two entities in a spring context
+
+	- GET    /topics/{id}/courses              Gets all topics
+	- GET    /topics/{id}/courses/{courseId}   Gets the topic
+	- POST   /topics/{id}/courses              Creates new topic
+	- PUT    /topics/{id}/courses/{courseId}   Updates the topic
+	- DELETE /topics/{id}/courses/{courseId}   Deletes the topic
 	
-### Java Application
-		1. update the project with maven
-		2. Run CourseApiApp.java as a Java Application
+### Installation
+	
+	- This is a **maven** project with a pom.xml, it follows the regular way of installing a **maven** project.
+	
+### Running
+ 
+	
+	1. Java Application
+		a. update the project with maven
+		b. Run CourseApiApp.java as a Java Application
+		
+	2. Generating a maven JAR file and running it
+		a. Run "maven clean install" inside the project
+		b. Run "java -jar /target/{jarName}"
+	
+	3.
+		
 	
 
 	
