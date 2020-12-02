@@ -37,7 +37,7 @@ Its implemention introduces the relationship two entities in a spring context
 	
 ### Installation
 	
-	- This is a **maven** project with a pom.xml, it follows the regular way of installing a **maven** project.
+	This is a **maven** project with a pom.xml, it follows the regular way of installing a **maven** project.
 	
 ### Running
  
