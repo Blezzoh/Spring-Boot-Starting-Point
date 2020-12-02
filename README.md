@@ -28,7 +28,7 @@ A good starting point for writting a spring boot web application
 
 	All of the ways listed below are done in eclipse ide. 
 	
-	### Java Application
+### Java Application
 		1. update the project with maven
 		2. Run CourseApiApp.java as a Java Application
 	
