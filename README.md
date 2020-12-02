@@ -5,7 +5,7 @@ A good starting point for writing a spring boot web application
 ### Package Embedded
 
 1. Spring boot web starter: A preset combination of JARs that works together 
-			for the web(check the Maven dependencies after updating the project)
+			for the web(check the **maven** dependencies folder after updating the project)
 
 2. Embedded TomCat Server
 	- Servlet container configurations is part of the application
@@ -49,8 +49,7 @@ Its implemention introduces the relationship two entities in a spring context
 	2. Generating a maven JAR file and running it
 		a. Run "maven clean install" inside the project
 		b. Run "java -jar /target/{jarName}"
-	
-	3.
+
 		
 	
 
